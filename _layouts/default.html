@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+
+  <body>
+    {{ content }}
+
+    <script src="{{ site.baseurl }}/js/vendor/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/vendor/what-input.min.js"></script>
+    <script src="{{ site.baseurl }}/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
