@@ -1,0 +1,23 @@
+---
+title: Archives
+---
+
+{% for post in site.posts %}
+  {% unless post.next %}
+    <h2>{{ post.date | date: "%B %Y"}}</h2>
+    <ul>
+  {% else %}
+    {% capture month %}{{ post.date | date: '%B %Y' }}{% endcapture %}
+    {% capture nmonth %}{{ post.next.date | date: '%B %Y' }}{% endcapture %}
+    {% if month != nmonth %}
+      </ul>
+      <h2>{{ post.date | date: "%B %Y"}}</h2>
+      <ul>
+    {% endif %}
+  {% endunless %}
+    <li>
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      <time datetime="{{ post.date }}">{{ post.date | date: "%-d %b %Y" }}</time>
+    </li>
+{% endfor %}
+</ul>
