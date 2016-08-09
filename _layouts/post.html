@@ -14,4 +14,8 @@ layout: default
     </p>
   </header>
   {{ content }}
+
+  {% if page.comments %}
+    {% include disqus.html %}
+  {% endif %}
 </article>
