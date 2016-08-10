@@ -1,0 +1,19 @@
+---
+title: Tags
+---
+{% assign tags = site.tags | sort %}
+{% for tag in tags %}
+  <a href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+{% endfor %}
+
+{% for tag in tags %}
+  <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+  <ul>
+    {% for post in tag[1] %}
+      <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
