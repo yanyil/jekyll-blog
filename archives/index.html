@@ -1,7 +1,6 @@
 ---
 title: Archives
 ---
-
 {% for post in site.posts %}
   {% unless post.next %}
     <h2>{{ post.date | date: "%B %Y"}}</h2>
@@ -17,7 +16,7 @@ title: Archives
   {% endunless %}
     <li>
       <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      <time datetime="{{ post.date }}">{{ post.date | date: "%-d %b %Y" }}</time>
+      <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
     </li>
 {% endfor %}
 </ul>
