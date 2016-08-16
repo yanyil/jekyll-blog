@@ -6,7 +6,7 @@ description: >
              Google search results) and in your feed.xml site description.
 baseurl: ""
 url: http://yoururl.com
-copyright: Copyright (c) 2016 Yan-Yi Li
+copyright: &copy 2016 Yan-Yi Li
 
 author:
   name: name
@@ -20,6 +20,9 @@ disqus: disqus-shortname
 permalink: pretty
 sass:
   style: compressed
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 defaults:
   -
