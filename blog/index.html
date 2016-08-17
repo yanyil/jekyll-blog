@@ -6,7 +6,7 @@ title: Blog
   <article>
     <header>
       <h1>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
       </h1>
       <p>
         <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
@@ -14,7 +14,7 @@ title: Blog
     </header>
     {{ post.excerpt }}
     <p>
-      <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+      <a href="{{ post.url | prepend: site.github.url }}">Read more</a>
     </p>
   </article>
 {% endfor %}
