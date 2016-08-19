@@ -11,7 +11,7 @@ title: Tags
   <ul>
     {% for post in tag[1] %}
       <li>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
         <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
       </li>
     {% endfor %}

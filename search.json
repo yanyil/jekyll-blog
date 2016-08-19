@@ -7,7 +7,7 @@ layout: null
       "title"    : "{{ post.title | escape }}",
       "category" : "{{ post.category }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
-      "url"      : "{{ post.url }}",
+      "url"      : "{{ post.url | prepend: site.github.url }}",
       "date"     : "{{ post.date }}",
       "content"  : "{{ post.content | strip_html | strip_newlines }}"
     } {% unless forloop.last %},{% endunless %}
@@ -19,7 +19,7 @@ layout: null
         "title"    : "{{ page.title | escape }}",
         "category" : "{{ page.category }}",
         "tags"     : "{{ page.tags | join: ', ' }}",
-        "url"      : "{{ page.url }}",
+        "url"      : "{{ page.url | prepend: site.github.url }}",
         "date"     : "{{ page.date }}",
         "content"  : "{{ page.content | strip_html | strip_newlines }}"
      {% endif %}
