@@ -3,26 +3,28 @@ layout: default
 ---
 
 <article class="post">
-  <header>
-    <h1>
+  <header class="post-header">
+    <h1 class="post-title">
       {{ page.title }}
     </h1>
-    <p>
-      <time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
-       • {% include reading-time.html %}
-    </p>
+    {% include post-meta.html %}
   </header>
-  {{ content }}
 
-  <footer>
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
     <p>Posted in
       <a href="{{ site.github.url }}/archives/categories/#{{ page.categories[1] | slugify }}">{{ page.categories[1] }}</a>
     </p>
 
     <p>Tags:
-      {% for tag in page.tags %}
-        <a href="{{ site.github.url }}/archives/tags/#{{ tag | slugify }}">{{ tag }}</a>
-      {% endfor %}
+      <div class="button-group">
+        {% for tag in page.tags %}
+          <a href="{{ site.github.url }}/archives/tags/#{{ tag | slugify }}" class="button">{{ tag }}</a>
+        {% endfor %}
+      </div>
     </p>
   </footer>
 

@@ -8,9 +8,7 @@ title: Blog
       <h2>
         <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
       </h2>
-      <p>
-        <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
-      </p>
+      {% include post-meta.html %}
     </header>
     {{ post.excerpt }}
     <p>

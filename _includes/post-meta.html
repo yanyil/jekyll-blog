@@ -1,0 +1,8 @@
+{% if post %}
+  {% assign page = post %}
+{% endif %}
+
+<p class="post-meta">
+  <time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
+   • {% include reading-time.html %}
+</p>
