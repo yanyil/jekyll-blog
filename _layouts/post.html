@@ -9,14 +9,22 @@ layout: default
     </h1>
     <p>
       <time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
-      <a href="{{ site.github.url }}/archives/categories/#{{ page.categories[1] | slugify }}">{{ page.categories[1] }}</a>
-      {% include reading-time.html %}
+       • {% include reading-time.html %}
     </p>
-    {% for tag in page.tags %}
-      <a href="{{ site.github.url }}/archives/tags/#{{ tag | slugify }}">{{ tag }}</a>
-    {% endfor %}
   </header>
   {{ content }}
+
+  <footer>
+    <p>Posted in
+      <a href="{{ site.github.url }}/archives/categories/#{{ page.categories[1] | slugify }}">{{ page.categories[1] }}</a>
+    </p>
+
+    <p>Tags:
+      {% for tag in page.tags %}
+        <a href="{{ site.github.url }}/archives/tags/#{{ tag | slugify }}">{{ tag }}</a>
+      {% endfor %}
+    </p>
+  </footer>
 
   {% if page.comments %}
     {% include disqus.html %}
