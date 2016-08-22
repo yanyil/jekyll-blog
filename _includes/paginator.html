@@ -1,0 +1,25 @@
+{% if paginator.total_pages > 1 %}
+<ul class="pagination text-center" role="navigation" aria-label="Pagination">
+  {% if paginator.previous_page %}
+    <li class="pagination-previous"><a href="{{ paginator.previous_page_path | prepend: site.github.url | replace: '//', '/' }}" aria-label="Previous page">Previous <span class="show-for-sr">page</span></a></li>
+  {% else %}
+    <li class="pagination-previous disabled">Previous</li>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <li class="current"><span class="show-for-sr">You're on page</span> {{ page }}</li>
+    {% elsif page == 1 %}
+      <li><a href="{{ paginator.previous_page_path | prepend: site.github.url | replace: '//', '/' }}" aria-label="Page {{ page }}">{{ page }}</a></li>
+    {% else %}
+      <li><a href="{{ site.paginate_path | prepend: site.github.url | replace: '//', '/' | replace: ':num', page }}" aria-label="Page {{ page }}">{{ page }}</a></li>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <li class="pagination-next"><a href="{{ paginator.next_page_path | prepend: site.github.url | replace: '//', '/' }}" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+  {% else %}
+    <li class="pagination-next disabled">Next</li>
+  {% endif %}
+</ul>
+{% endif %}
