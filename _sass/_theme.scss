@@ -1,0 +1,15 @@
+.post-list {
+  background: $white;
+  margin: 1rem 0;
+  padding: 1rem;
+
+  @media #{$medium-only} {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  @media #{$large-up} {
+    margin: 1rem;
+    padding: 3rem;
+  }
+}

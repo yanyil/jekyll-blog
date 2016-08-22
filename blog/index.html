@@ -3,11 +3,11 @@ title: Blog
 ---
 
 {% for post in paginator.posts %}
-  <article>
+  <article class="post-list">
     <header>
-      <h1>
+      <h2>
         <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
-      </h1>
+      </h2>
       <p>
         <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
       </p>
