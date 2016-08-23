@@ -1,6 +1,9 @@
-<div id="search-container" class="show-for-sr">
+<div id="search-container" class="reveal" data-reveal>
   <input type="text" id="search-input" placeholder="search...">
   <ul id="results-container"></ul>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <i class="fa fa-close" aria-hidden="true"></i>
+  </button>
 </div>
 
 <script src="{{ site.github.url }}/js/jekyll-search.min.js" type="text/javascript"></script>

@@ -1,6 +1,7 @@
-function toggleSearch() {
-  $('#search').click(function() {
-    $('#search-container').toggleClass("show-for-sr");
+$(document).foundation();
+
+$('#search').click(function() {
+  $('#search-container').on('open.zf.reveal', function() {
     $('#search-input').focus();
   });
-}
+});
