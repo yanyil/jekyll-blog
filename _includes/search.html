@@ -1,13 +1,13 @@
-<div id="search-container" class="reveal" data-reveal>
-  <input type="text" id="search-input" placeholder="search...">
+<div class="reveal" id="search-container" data-reveal>
+  <input id="search-input" type="text" placeholder="search...">
   <ul id="results-container"></ul>
-  <button class="close-button" data-close aria-label="Close modal" type="button">
+  <button class="close-button" type="button" data-close aria-label="Close modal">
     <i class="fa fa-close" aria-hidden="true"></i>
   </button>
 </div>
 
-<script src="{{ site.github.url }}/js/jekyll-search.min.js" type="text/javascript"></script>
-<script type="text/javascript">
+<script src="{{ site.github.url }}/js/jekyll-search.min.js"></script>
+<script>
   SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
