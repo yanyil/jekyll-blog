@@ -14,21 +14,23 @@ layout: default
     {{ content }}
   </div>
 
+  <hr>
+
   <footer class="post-footer">
-    <p>Posted in
-      <a href="{{ site.github.url }}/archives/categories/#{{ page.categories[1] | slugify }}">{{ page.categories[1] }}</a>
+    <p>
+      <small>Filed under:
+        <a href="{{ site.github.url }}/archives/categories/#{{ page.categories[1] | slugify }}">{{ page.categories[1] }}</a>
+      </small>
     </p>
 
-    <p>Tags:
-      <div class="button-group">
-        {% for tag in page.tags %}
-          <a href="{{ site.github.url }}/archives/tags/#{{ tag | slugify }}" class="button">{{ tag }}</a>
-        {% endfor %}
-      </div>
-    </p>
+    <div class="small button-group">
+      {% for tag in page.tags %}
+        <a href="{{ site.github.url }}/archives/tags/#{{ tag | slugify }}" class="button">{{ tag }}</a>
+      {% endfor %}
+    </div>
   </footer>
-
-  {% if page.comments %}
-    {% include disqus.html %}
-  {% endif %}
 </article>
+
+{% if page.comments %}
+  {% include disqus.html %}
+{% endif %}

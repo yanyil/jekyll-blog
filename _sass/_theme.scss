@@ -12,18 +12,18 @@
   }
 }
 
-.post-list, .post {
+.post-list, .post, .post-comments {
   background: $white;
   margin: 1rem 0;
   padding: 1rem;
 
   @media #{$medium-only} {
     margin: 1rem;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   @media #{$large-up} {
     margin: 1rem;
-    padding: 3rem;
+    padding: 5rem;
   }
 }
