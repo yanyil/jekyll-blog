@@ -6,18 +6,7 @@
   <div class="top-bar-right">
     <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
       {% for nav in site.data.navigation %}
-        {% if nav.children %}
-          <li {% if page.url contains nav.url %}class="active"{% endif %}>
-            <a href="{{ nav.url | prepend: site.github.url }}">{{ nav.title }}</a>
-            <ul class="menu vertical nested">
-              {% for child in nav.children %}
-                <li><a href="{{ child.childurl | prepend: site.github.url }}">{{ child.childtitle }}</a></li>
-              {% endfor %}
-            </ul>
-          </li>
-        {% else %}
-          <li {% if page.url contains nav.url %}class="active"{% endif %}><a href="{{ nav.url | prepend: site.github.url }}">{{ nav.title }}</a></li>
-        {% endif %}
+        <li {% if page.url contains nav.url %}class="active"{% endif %}><a href="{{ nav.url | prepend: site.github.url }}">{{ nav.title }}</a></li>
       {% endfor %}
       <li><button class="button" id="search" type="button" data-open="search-container"><i class="fa fa-search"></i></button></li>
     </ul>

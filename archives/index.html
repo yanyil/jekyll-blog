@@ -1,6 +1,8 @@
 ---
 title: Archives
 ---
+By <a href="{{ site.github.url }}/archives/categories">Categories</a> or By <a href="{{ site.github.url }}/archives/tags">Tags</a>
+
 {% for post in site.posts %}
   {% unless post.next %}
     <h2>{{ post.date | date: "%B %Y"}}</h2>
