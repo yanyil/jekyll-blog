@@ -1,24 +1,26 @@
 ---
 title: Archives
 ---
-By <a href="{{ site.github.url }}/archives/categories">Categories</a> or By <a href="{{ site.github.url }}/archives/tags">Tags</a>
+<div class="archives-dates">
+  By <a href="{{ site.github.url }}/archives/categories">Categories</a> or By <a href="{{ site.github.url }}/archives/tags">Tags</a>
 
-{% for post in site.posts %}
-  {% unless post.next %}
-    <h2>{{ post.date | date: "%B %Y"}}</h2>
-    <ul>
-  {% else %}
-    {% capture month %}{{ post.date | date: '%B %Y' }}{% endcapture %}
-    {% capture nmonth %}{{ post.next.date | date: '%B %Y' }}{% endcapture %}
-    {% if month != nmonth %}
-      </ul>
+  {% for post in site.posts %}
+    {% unless post.next %}
       <h2>{{ post.date | date: "%B %Y"}}</h2>
       <ul>
-    {% endif %}
-  {% endunless %}
-    <li>
-      <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
-      <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
-    </li>
-{% endfor %}
-</ul>
+    {% else %}
+      {% capture month %}{{ post.date | date: '%B %Y' }}{% endcapture %}
+      {% capture nmonth %}{{ post.next.date | date: '%B %Y' }}{% endcapture %}
+      {% if month != nmonth %}
+        </ul>
+        <h2>{{ post.date | date: "%B %Y"}}</h2>
+        <ul>
+      {% endif %}
+    {% endunless %}
+      <li>
+        <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
+        <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
+      </li>
+  {% endfor %}
+  </ul>
+</div>
