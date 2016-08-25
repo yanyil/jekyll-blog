@@ -5,18 +5,20 @@
 <div class="top-bar" id="menu">
   <div class="top-bar-right">
     <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
-      <li><a href="{{ site.github.url }}/">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="{{ site.github.url }}/blog">Blog</a></li>
-      <li>
-        <a href="{{ site.github.url }}/archives">Archives</a>
-        <ul class="menu vertical nested">
-          <li><a href="{{ site.github.url }}/archives">By Dates</a></li>
-          <li><a href="{{ site.github.url }}/archives/categories">By Categories</a></li>
-          <li><a href="{{ site.github.url }}/archives/tags">By Tags</a></li>
-        </ul>
-      </li>
-      <li><a href="{{ site.github.url }}/contact">Contact</a></li>
+      {% for nav in site.data.navigation %}
+        {% if nav.children %}
+          <li {% if page.url contains nav.url %}class="active"{% endif %}>
+            <a href="{{ nav.url | prepend: site.github.url }}">{{ nav.title }}</a>
+            <ul class="menu vertical nested">
+              {% for child in nav.children %}
+                <li><a href="{{ child.childurl | prepend: site.github.url }}">{{ child.childtitle }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% else %}
+          <li {% if page.url contains nav.url %}class="active"{% endif %}><a href="{{ nav.url | prepend: site.github.url }}">{{ nav.title }}</a></li>
+        {% endif %}
+      {% endfor %}
       <li><button class="button" id="search" type="button" data-open="search-container"><i class="fa fa-search"></i></button></li>
     </ul>
   </div>

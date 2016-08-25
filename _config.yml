@@ -19,7 +19,7 @@ disqus: disqus-shortname
 permalink: pretty
 sass:
   style: compressed
-include: ["_pages"]
+include: ["_pages", "_data"]
 gems: [jekyll-paginate]
 paginate: 5
 paginate_path: "/blog/page:num/"

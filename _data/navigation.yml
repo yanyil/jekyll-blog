@@ -1,0 +1,15 @@
+- title: About
+  url: /about
+- title: Blog
+  url: /blog
+- title: Archives
+  url: /archives
+  children:
+    - childtitle: By Dates
+      childurl: /archives
+    - childtitle: By Categories
+      childurl: /archives/categories
+    - childtitle: By Tags
+      childurl: /archives/tags
+- title: Contact
+  url: /contact
