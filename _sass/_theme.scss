@@ -12,18 +12,20 @@
   }
 }
 
-.post-list, .post, .post-comments, .archives-dates, .archives-categories, .archives-tags, .about, .contact, .thanks, .page-missing {
+.grid-inner {
   background: $white;
   margin-bottom: 1rem;
   padding: 1rem;
 
   @media #{$medium-only} {
-    margin-bottom: 1rem;
     padding: 2rem;
   }
 
   @media #{$large-up} {
-    margin-bottom: 1rem;
     padding: 5rem;
   }
+}
+
+.aside {
+  padding: 2rem;
 }

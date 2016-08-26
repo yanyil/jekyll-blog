@@ -1,9 +1,10 @@
 ---
+layout: post-list
 title: Blog
 ---
 
 {% for post in paginator.posts %}
-  <article class="post-list">
+  <article class="grid-inner">
     <header>
       <h2>
         <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>

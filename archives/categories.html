@@ -1,16 +1,14 @@
 ---
 title: Categories
 ---
-<div class="archives-categories">
-  {% for category in site.categories offset: 1 %}
-    <h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
-    <ul>
-      {% for post in category[1] %}
-        <li>
-          <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
-          <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
-</div>
+{% for category in site.categories offset: 1 %}
+  <h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
+  <ul>
+    {% for post in category[1] %}
+      <li>
+        <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
+        <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
