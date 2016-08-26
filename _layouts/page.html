@@ -3,13 +3,19 @@ layout: default
 ---
 <div class="row medium-10 large-uncollapse large-11 columns">
   <div class="large-9 columns">
-    <div class="grid-inner">
-      {{ content }}
-    </div>
+    <article class="grid-inner">
+      <header>
+        <h1>{{ page.title }}</h1>
+      </header>
+
+      <section>
+        {{ content }}
+      </section>
+    </article>
   </div>
   <div class="large-3 columns">
-    <div class="aside grid-inner">
+    <aside class="aside grid-inner">
       {% include about-author.html %}
-    </div>
+    </aside>
   </div>
 </div>
