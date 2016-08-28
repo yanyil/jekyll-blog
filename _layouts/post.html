@@ -8,20 +8,17 @@ layout: grid-default
     </h1>
     {% include post-meta.html %}
   </header>
-
-  <div class="post-content">
+  <section class="post-content">
     {{ content }}
-  </div>
+  </section>
 
   <hr>
-
   <footer class="post-footer">
     <p>
       <small>Filed under:
         <a href="{{ site.github.url }}/archives/categories/#{{ page.categories[1] | slugify }}">{{ page.categories[1] }}</a>
       </small>
     </p>
-
     <div class="small button-group">
       {% for tag in page.tags %}
         <a class="button" href="{{ site.github.url }}/archives/tags/#{{ tag | slugify }}">{{ tag }}</a>

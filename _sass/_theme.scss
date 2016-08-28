@@ -13,7 +13,7 @@
 }
 
 .grid-inner {
-  background: $white;
+  background-color: $white;
   margin-bottom: 1rem;
   padding: 1rem;
 
@@ -28,4 +28,9 @@
 
 .aside {
   padding: 2rem;
+}
+
+.footer {
+  background-color: $primary-color;
+  color: $white;
 }
