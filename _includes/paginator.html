@@ -1,9 +1,7 @@
 {% if paginator.total_pages > 1 %}
 <ul class="pagination text-center" role="navigation" aria-label="Pagination">
   {% if paginator.previous_page %}
-    <li class="pagination-previous"><a href="{{ paginator.previous_page_path | prepend: site.github.url | replace: '//', '/' }}" aria-label="Previous page">Previous <span class="show-for-sr">page</span></a></li>
-  {% else %}
-    <li class="pagination-previous disabled">Previous</li>
+    <li><a href="{{ paginator.previous_page_path | prepend: site.github.url | replace: '//', '/' }}" aria-label="Previous page"><i class="fa fa-angle-double-left"></i><span class="show-for-sr">Previous page</span></a></li>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
@@ -17,9 +15,7 @@
   {% endfor %}
 
   {% if paginator.next_page %}
-    <li class="pagination-next"><a href="{{ paginator.next_page_path | prepend: site.github.url | replace: '//', '/' }}" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
-  {% else %}
-    <li class="pagination-next disabled">Next</li>
+    <li><a href="{{ paginator.next_page_path | prepend: site.github.url | replace: '//', '/' }}" aria-label="Next page"><i class="fa fa-angle-double-right"></i><span class="show-for-sr">Next page</span></a></li>
   {% endif %}
 </ul>
 {% endif %}

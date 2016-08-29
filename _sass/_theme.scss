@@ -39,6 +39,10 @@
   font-weight: bold;
 }
 
+.pagination > li {
+  background-color: $white;
+}
+
 .footer {
   background-color: $primary-color;
   color: $white;
