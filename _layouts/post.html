@@ -21,7 +21,7 @@ layout: grid-default
     </p>
     <div class="small button-group">
       {% for tag in page.tags %}
-        <a class="button" href="{{ site.github.url }}/archives/tags/#{{ tag | slugify }}">{{ tag }}</a>
+        <a class="button primary hollow" href="{{ site.github.url }}/archives/tags/#{{ tag | slugify }}">{{ tag }}</a>
       {% endfor %}
     </div>
   </footer>

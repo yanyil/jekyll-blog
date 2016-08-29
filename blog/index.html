@@ -6,7 +6,7 @@ title: Blog
 {% for post in paginator.posts %}
   <article class="grid-inner">
     <header>
-      <h2>
+      <h2 class="post-title">
         <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
       </h2>
       {% include post-meta.html %}

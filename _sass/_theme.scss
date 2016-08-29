@@ -30,11 +30,21 @@ nav a {
   color: $secondary-color;
 }
 
+.post-title a {
+  color: $black;
+}
+
 .post-meta {
   color: $dark-gray;
 }
 
-.archives-header {
+a:hover.button.primary.hollow {
+  background-color: $primary-color;
+  color: $white;
+  border-color: $primary-color;
+}
+
+.archives-title {
   font-size: $global-font-size * 1.5;
 }
 
@@ -43,7 +53,7 @@ nav a {
   font-size: $global-font-size * 0.9;
 }
 
-.aside-header {
+.aside-title {
   font-size: $global-font-size * 1.25;
   font-weight: bold;
 }

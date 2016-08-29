@@ -4,12 +4,12 @@ title: Tags
 <div class="small button-group">
   {% assign tags = site.tags | sort %}
   {% for tag in tags %}
-    <a href="#{{ tag[0] | slugify }}" class="button">{{ tag[0] }}</a>
+    <a href="#{{ tag[0] | slugify }}" class="button primary hollow">{{ tag[0] }}</a>
   {% endfor %}
 </div>
 
 {% for tag in tags %}
-  <h2 id="{{ tag[0] | slugify }}" class="archives-header">{{ tag[0] }}</h2>
+  <h2 id="{{ tag[0] | slugify }}" class="archives-title">{{ tag[0] }}</h2>
   <ul>
     {% for post in tag[1] %}
       <li>
