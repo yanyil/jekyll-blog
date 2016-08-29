@@ -15,7 +15,7 @@
           <li {% if page.url contains nav.url %}class="active"{% endif %}><a href="{{ nav.url | prepend: site.github.url }}">{{ nav.title }}</a></li>
         {% endif %}
       {% endfor %}
-      <li><button class="button hide-for-small-only" id="search" type="button" data-open="search-container"><i class="fa fa-search"></i></button></li>
+      <li><a class="hide-for-small-only" id="search" data-open="search-container"><i class="fa fa-search"></i></a></li>
     </ul>
   </div>
 </div>
