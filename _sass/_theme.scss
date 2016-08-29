@@ -26,8 +26,17 @@
   }
 }
 
+.archives-header {
+  font-size: $global-font-size * 1.5;
+}
+
 .aside {
   padding: 2rem;
+}
+
+.aside-header {
+  font-size: $global-font-size * 1.25;
+  font-weight: bold;
 }
 
 .footer {
