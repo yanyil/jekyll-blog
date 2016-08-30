@@ -1,3 +1,7 @@
+/* Import Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Arbutus+Slab|Open+Sans);
+
+/* Prevent FOUC */
 .no-js {
   @include breakpoint(small only) {
     .top-bar {
@@ -12,6 +16,7 @@
   }
 }
 
+/* Basic grid styling */
 .grid-inner {
   background-color: $white;
   margin-bottom: 1rem;
@@ -26,6 +31,7 @@
   }
 }
 
+/* Site header */
 .site-header {
   margin-bottom: 1.5rem;
 }
@@ -46,6 +52,7 @@ nav a {
   color: $secondary-color;
 }
 
+/* Posts */
 .post-title a {
   color: $black;
 }
@@ -54,30 +61,36 @@ nav a {
   color: $dark-gray;
 }
 
+/* Tags */
 a:hover.button.primary.hollow {
   background-color: $primary-color;
   color: $white;
   border-color: $primary-color;
 }
 
+/* Archives */
 .archives-title {
   font-size: $global-font-size * 1.5;
 }
 
+/* Aside */
 .aside .grid-inner {
   padding: 2rem;
   font-size: $global-font-size * 0.9;
 }
 
 .aside-title {
+  font-family: $body-font-family;
   font-size: $global-font-size * 1.25;
   font-weight: bold;
 }
 
+/* Pagination */
 .pagination > li {
   background-color: $white;
 }
 
+/* Site footer */
 .footer {
   padding: 1rem;
 }
