@@ -12,7 +12,8 @@
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
     json: '{{ site.github.url }}/search.json',
-    noResultsText: 'No results found',
+    noResultsText: '<p>No results found</p>',
+    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
     limit: 10,
     fuzzy: false
   })
