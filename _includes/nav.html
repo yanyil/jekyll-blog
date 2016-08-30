@@ -1,21 +1,19 @@
-<div class="title-bar" data-responsive-toggle="menu" data-hide-for="medium">
+<div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
   <button class="menu-icon" type="button" data-toggle></button>
   <div class="title-bar-title float-right">
     <i class="fa fa-search" id="mobile-search" data-open="search-container"></i>
   </div>
 </div>
 
-<div class="top-bar" id="menu">
-  <div class="top-bar-right">
-    <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
-      {% for nav in site.data.navigation %}
-        {% if nav.url == "/" %}
-          <li {% if page.url == "/" %}class="active"{% endif %}><a href="{{ site.github.url }}/">{{ nav.title }}</a></li>
-        {% else %}
-          <li {% if page.url contains nav.url %}class="active"{% endif %}><a href="{{ nav.url | prepend: site.github.url }}">{{ nav.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-      <li><a class="hide-for-small-only" id="search" data-open="search-container"><i class="fa fa-search"></i></a></li>
-    </ul>
-  </div>
+<div class="menu-centered" id="nav-menu">
+  <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
+    {% for nav in site.data.navigation %}
+      {% if nav.url == "/" %}
+        <li {% if page.url == "/" %}class="active"{% endif %}><a href="{{ site.github.url }}/">{{ nav.title }}</a></li>
+      {% else %}
+        <li {% if page.url contains nav.url %}class="active"{% endif %}><a href="{{ nav.url | prepend: site.github.url }}">{{ nav.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+    <li><a class="hide-for-small-only" id="search" data-open="search-container"><i class="fa fa-search"></i></a></li>
+  </ul>
 </div>
