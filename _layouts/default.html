@@ -4,11 +4,13 @@
 
   <body>
     <header class="site-header">
-      <h1 class="site-title">{{ site.title }}</h1>
-      <nav class="site-nav">
-        {% include nav.html %}
-        {% include search.html %}
-      </nav>
+      <h1 class="site-title"><a href="{{ site.github.url }}/">{{ site.title }}</a></h1>
+      <div class="row medium-10 large-11 column">
+        <nav class="site-nav">
+          {% include nav.html %}
+          {% include search.html %}
+        </nav>
+      </div>
     </header>
     <main>
       {{ content }}

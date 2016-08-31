@@ -1,7 +1,6 @@
 <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
-  <button class="menu-icon" type="button" data-toggle></button>
-  <div class="title-bar-title float-right">
-    <i class="fa fa-search" id="mobile-search" data-open="search-container"></i>
+  <div class="menu-centered">
+    <button class="menu-icon" type="button" data-toggle></button>
   </div>
 </div>
 
@@ -14,6 +13,6 @@
         <li {% if page.url contains nav.url %}class="active"{% endif %}><a href="{{ nav.url | prepend: site.github.url }}">{{ nav.title }}</a></li>
       {% endif %}
     {% endfor %}
-    <li><a class="hide-for-small-only" id="search" data-open="search-container"><i class="fa fa-search"></i></a></li>
+    <li><a id="search" data-open="search-container"><i class="fa fa-search"></i></a></li>
   </ul>
 </div>

@@ -238,7 +238,7 @@ $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $secondary-color;
-$button-background-hover: map-get($foundation-palette, ecru);
+$button-background-hover: $anchor-color-hover;
 $button-color: $white;
 $button-color-alt: $black;
 $button-radius: $global-radius;
@@ -380,7 +380,7 @@ $mediaobject-image-width-stacked: 100%;
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
 $menu-item-padding: 0.7rem 1rem;
-$menu-item-color-active: map-get($foundation-palette, ecru);
+$menu-item-color-active: $anchor-color-hover;
 $menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
 
@@ -535,12 +535,12 @@ $thumbnail-radius: $global-radius;
 // 34. Title Bar
 // -------------
 
-$titlebar-background: $primary-color;
+$titlebar-background: $body-background;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
-$titlebar-icon-color-hover: $medium-gray;
+$titlebar-icon-color: $secondary-color;
+$titlebar-icon-color-hover: $anchor-color-hover;
 $titlebar-icon-spacing: 0.25rem;
 
 // 35. Tooltip
