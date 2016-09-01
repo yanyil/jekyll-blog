@@ -1,0 +1,12 @@
+- slide: 0
+  description: First slide details.
+  content: <strong>First slide.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde harum rem, beatae ipsa consectetur quisquam.
+- slide: 1
+  description: Second slide details.
+  content: <strong>Second slide.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde harum rem, beatae ipsa consectetur quisquam.
+- slide: 2
+  description: Third slide details.
+  content: <strong>Third slide.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde harum rem, beatae ipsa consectetur quisquam.
+- slide: 3
+  description: Fourth slide details.
+  content: <strong>Fourth slide.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde harum rem, beatae ipsa consectetur quisquam.

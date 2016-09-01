@@ -62,7 +62,7 @@
 }
 
 /* Home Page */
-.bgimg-1 {
+.bgimg {
   padding: 7.5rem 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -90,10 +90,6 @@
   @media #{$large-up} {
     padding: 3rem 7rem;
   }
-}
-
-.home-title {
-  text-align: center;
 }
 
 /* Posts */
