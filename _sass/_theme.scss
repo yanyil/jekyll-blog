@@ -83,6 +83,19 @@
   opacity: 0.65;
 }
 
+.home-module {
+  background-color: $white;
+  padding: 3rem 1rem;
+
+  @media #{$large-up} {
+    padding: 3rem 7rem;
+  }
+}
+
+.home-title {
+  text-align: center;
+}
+
 /* Posts */
 .post-title a {
   color: $black;
