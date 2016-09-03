@@ -1,7 +1,7 @@
 <div class="grid-inner">
   <h3 class="aside-title">Categories</h3>
   <ul>
-    {% for category in site.categories | offset: 1 %}
+    {% for category in site.categories offset:1 %}
       <li><a href="{{ site.github.url }}/archives/categories/#{{ category[0] | slugify }}">{{ category[0] }}</a></li>
     {% endfor %}
   </ul>

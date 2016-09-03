@@ -2,9 +2,9 @@ $(document).ready(function($) {
   $(document).foundation();
 
   // carousel
-  $('#carousel').slick({
-    autoplay: true
-  });
+  var inputSize = $('#carousel').data('carousel-total');
+  var outputSize = $('#carousel').data('carousel-to-show');
+  generateRandomSlides(inputSize, outputSize);
 
   // focus search input
   $('#search, #mobile-search').click(function() {

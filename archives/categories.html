@@ -1,7 +1,7 @@
 ---
 title: Categories
 ---
-{% for category in site.categories offset: 1 %}
+{% for category in site.categories offset:1 %}
   <h2 id="{{ category[0] | slugify }}" class="archives-title">{{ category[0] }}</h2>
   <ul>
     {% for post in category[1] %}

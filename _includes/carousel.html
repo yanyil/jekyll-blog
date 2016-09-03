@@ -1,7 +1,21 @@
-<div id="carousel">
+{% assign total = site.data.slides | size %}
+{% assign output = site.carousel-slides %}
+{% unless output %}
+  {% assign output = total %}
+{% endunless %}
+
+<div id="carousel" data-carousel-total="{{ total }}" data-carousel-to-show="{{ output }}">
   {% for slide in site.data.slides %}
     <div class="caption">
       <p class="text-center">{{ slide.content }}</p>
     </div>
   {% endfor %}
 </div>
+
+<noscript>
+  {% for slide in site.data.slides limit:output %}
+    <div class="caption">
+      <p class="text-center">{{ slide.content }}</p>
+    </div>
+  {% endfor %}
+</noscript>

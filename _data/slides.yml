@@ -10,3 +10,9 @@
 - slide: 3
   description: Fourth slide details.
   content: <strong>Fourth slide.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde harum rem, beatae ipsa consectetur quisquam.
+- slide: 4
+  description: Fifth slide details.
+  content: <strong>Fifth slide.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde harum rem, beatae ipsa consectetur quisquam.
+- slide: 5
+  description: Sixth slide details.
+  content: <strong>Sixth slide.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde harum rem, beatae ipsa consectetur quisquam.
