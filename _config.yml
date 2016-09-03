@@ -15,7 +15,7 @@ author:
   avatar: avatar.jpg
 
 disqus: disqus-shortname
-carousel-slides: 4
+carousel_slides: 4
 
 # Build settings
 sass:

@@ -1,0 +1,10 @@
+<div class="home-module expanded row">
+  <h2>Featured Posts</h2>
+  <ul>
+    {% for post in site.posts %}
+      {% if post.featured %}
+        <li><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
