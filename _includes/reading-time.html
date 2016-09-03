@@ -1,7 +1,7 @@
 {% if page.minutes %}
   {% assign minutes = page.minutes %}
 {% else %}
-  {% assign minutes = content | number_of_words | divided_by: 200 %}
+  {% assign minutes = content | number_of_words | divided_by: site.words_per_minute %}
   {% if minutes == 0 %}{% assign minutes = 1 %}{% endif %}
 {% endif %}
 {{ minutes }} min read

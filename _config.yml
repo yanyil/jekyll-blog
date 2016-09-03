@@ -9,13 +9,15 @@ copyright: Yan-Yi Li
 
 author:
   name: name
+  bio: A short paragraph about you. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  avatar: avatar.jpg
   email: your-email@domain.com
   github: username
   twitter: username
-  avatar: avatar.jpg
 
 disqus: disqus-shortname
 carousel_slides: 4
+words_per_minute: 200
 
 # Build settings
 sass:
