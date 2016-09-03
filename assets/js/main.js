@@ -1,6 +1,11 @@
 $(document).ready(function($) {
   $(document).foundation();
 
+  // carousel
+  $('#carousel').slick({
+    autoplay: true
+  });
+
   // focus search input
   $('#search, #mobile-search').click(function() {
     $('#search-container').on('open.zf.reveal', function() {
