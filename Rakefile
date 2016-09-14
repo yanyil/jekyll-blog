@@ -6,6 +6,7 @@ BLOG_PATH = "blog/"
 EDITOR = "subl"
 PORT = 4000
 DATE = Time.now.strftime("%Y-%m-%d")
+GITHUB_REPO = "yyl29/jekyll-blog"
 
 # == Tasks ===========================================================
 task :default do
@@ -63,6 +64,21 @@ end
 
 desc "Preview site in the default browser"
 task :preview => 'preview:site'
+
+desc "Deploy site to gh-pages"
+task :deploy do
+  system "git checkout gh-pages"
+  system "git add ."
+  message = "Site updated at #{Time.now}"
+  system "git commit -m #{message.inspect}"
+  system "git push origin master:refs/heads/gh-pages"
+  system "git checkout master"
+end
+
+desc "testing..."
+task :test do
+  puts Time.now
+end
 
 # == Helpers =========================================================
 def check_title(title)
