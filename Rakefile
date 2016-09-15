@@ -67,14 +67,23 @@ task :preview => 'preview:site'
 
 desc "Deploy site to gh-pages"
 task :deploy do
-  system "git add ."
-  message = "Site updated at #{Time.now}"
-  system "git commit -m #{message.inspect}"
-  system "git push origin master"
-  system "git checkout gh-pages"
-  system "git filter-branch --subdirectory-filter _site/"
-  system "git push origin gh-pages"
-  system "git checkout master"
+  system "JEKYLL_ENV=production jekyll build"
+
+  Dir.mktmpdir do |tmp|
+    cp_r "_site/.", tmp
+
+    pwd = Dir.pwd
+    Dir.chdir tmp
+
+    system "git init"
+    system "git add ."
+    message = "Site updated at #{Time.now}"
+    system "git commit -m #{message.inspect}"
+    system "git remote add origin https://github.com/#{GITHUB_REPO}"
+    system "git push origin master:refs/heads/gh-pages --force"
+
+    Dir.chdir pwd
+  end
 end
 
 # == Helpers =========================================================
