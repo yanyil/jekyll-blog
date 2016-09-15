@@ -7,13 +7,13 @@ title: Blog
   <article class="grid-inner">
     <header>
       <h2 class="post-title">
-        <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
+        <a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
       </h2>
       {% include post-meta.html %}
     </header>
     {{ post.excerpt }}
     <p>
-      <a href="{{ post.url | prepend: site.github.url }}">Read more</a>
+      <a href="{{ post.url | prepend: site.url }}">Read more</a>
     </p>
   </article>
 {% endfor %}

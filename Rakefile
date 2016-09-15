@@ -52,13 +52,13 @@ end
 namespace :preview do
   task :site do
     launch_browser
-    system "jekyll serve"
+    system "jekyll serve --config _config.yml,_config-dev.yml"
   end
 
   desc "Preview site with drafts in the default browser"
   task :drafts do
     launch_browser
-    system "jekyll serve --drafts"
+    system "jekyll serve --drafts --config _config.yml,_config-dev.yml"
   end
 end
 

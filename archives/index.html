@@ -1,7 +1,7 @@
 ---
 title: Archives
 ---
-<p>By <a href="{{ site.github.url }}/archives/categories">Categories</a> or By <a href="{{ site.github.url }}/archives/tags">Tags</a></p>
+<p>By <a href="{{ site.url }}/archives/categories">Categories</a> or By <a href="{{ site.url }}/archives/tags">Tags</a></p>
 
 {% for post in site.posts %}
   {% unless post.next %}
@@ -17,7 +17,7 @@ title: Archives
     {% endif %}
   {% endunless %}
     <li>
-      <a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
+      <a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
       <small><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></small>
     </li>
 {% endfor %}

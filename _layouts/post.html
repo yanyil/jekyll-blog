@@ -16,12 +16,12 @@ layout: grid-default
   <footer class="post-footer">
     <p>
       <small>Filed under:
-        <a href="{{ site.github.url }}/archives/categories/#{{ page.categories[1] | slugify }}">{{ page.categories[1] }}</a>
+        <a href="{{ site.url }}/archives/categories/#{{ page.categories[1] | slugify }}">{{ page.categories[1] }}</a>
       </small>
     </p>
     <div class="small button-group">
       {% for tag in page.tags %}
-        <a class="button primary hollow" href="{{ site.github.url }}/archives/tags/#{{ tag | slugify }}">{{ tag }}</a>
+        <a class="button primary hollow" href="{{ site.url }}/archives/tags/#{{ tag | slugify }}">{{ tag }}</a>
       {% endfor %}
     </div>
   </footer>
