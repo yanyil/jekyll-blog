@@ -22,7 +22,8 @@ words_per_minute: 200
 # Build settings
 sass:
   style: compressed
-include: ["_pages", "_data"]
+include: [_pages, _data]
+exclude: [Gemfile, Gemfile.lock, LICENSE, Rakefile]
 gems: [jekyll-paginate]
 permalink: pretty
 paginate: 5
