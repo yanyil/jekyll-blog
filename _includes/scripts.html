@@ -4,3 +4,6 @@
 <script src="{{ site.url }}/assets/vendor/slick/slick.min.js"></script>
 <script src="{{ site.url }}/assets/js/carousel.js"></script>
 <script src="{{ site.url }}/assets/js/main.js"></script>
+{% if jekyll.environment == "production" %}
+  {% include analytics.html %}
+{% endif %}
